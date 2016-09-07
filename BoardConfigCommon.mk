@@ -54,9 +54,6 @@ BOARD_CHARGER_SHOW_PERCENTAGE := true
 # CMHW
 BOARD_HARDWARE_CLASS += $(VENDOR_PATH)/cmhw
 
-# Custom RIL class
-BOARD_RIL_CLASS := ../../../$(VENDOR_PATH)/ril
-
 # Display
 NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
 OVERRIDE_RS_DRIVER := libRSDriver_adreno.so
@@ -107,8 +104,9 @@ ifeq ($(HOST_OS),linux)
 endif
 
 # SELinux
-#-include device/qcom/sepolicy/sepolicy.mk
-#BOARD_SEPOLICY_DIRS += $(VENDOR_PATH)/sepolicy
+-include device/qcom/sepolicy/sepolicy.mk
+
+BOARD_SEPOLICY_DIRS += $(VENDOR_PATH)/sepolicy
 
 # Wifi
 BOARD_HAS_QCOM_WLAN              := true

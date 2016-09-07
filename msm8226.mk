@@ -23,30 +23,27 @@ PRODUCT_AAPT_PREF_CONFIG := xhdpi
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 1280
-TARGET_SCREEN_WIDTH := 720
+TARGET_SCREEN_WIDTH := 800
 
 # Audio
-#PRODUCT_PACKAGES += \
-    #audiod \
-    #audio.a2dp.default \
-    #audio.primary.msm8226 \
-    #audio.r_submix.default \
-    #audio.usb.default
+PRODUCT_PACKAGES += \
+    audiod \
+    audio.a2dp.default \
+    audio.primary.msm8226 \
+    audio.r_submix.default \
+    audio.usb.default
 
-#PRODUCT_PACKAGES += \
-    #libaudio-resampler \
-    #libqcompostprocbundle \
-    #libqcomvisualizer \
-    #libqcomvoiceprocessing \
-    #tinymix
+PRODUCT_PACKAGES += \
+    libaudio-resampler \
+    libqcompostprocbundle \
+    libqcomvisualizer \
+    libqcomvoiceprocessing \
+    tinymix
 
 # Camera
 PRODUCT_PACKAGES += \
-    camera.msm8226 \
-    libboringssl-compat \
-    libstlport \
     libxml2 \
-    #Snap
+    Snap
 
 # CRDA
 PRODUCT_PACKAGES += \
@@ -136,10 +133,6 @@ PRODUCT_COPY_FILES += \
 # Power
 PRODUCT_PACKAGES += \
     power.msm8226
-
-# Radio
-PRODUCT_PACKAGES += \
-    libril_shim
 
 # Ramdisk
 PRODUCT_PACKAGES += \
